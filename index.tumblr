@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {block:Description}
+    <meta name="description" content="{MetaDescription}">
+    {/block:Description}
+    <title>{Title}</title>
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <style>
+      iframe {
+        max-width: 100%;
+      }
+      {CustomCSS}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="/">{Title}</a>
+      </h1>
+      {block:Description}
+      <p>{Description}</p>
+      {/block:Description}
+      <nav>
+        <ul>
+          <li>
+            <a href="/archive">Archive</a>
+          </li>
+          {block:HasPages}
+          {block:Pages}
+          <li>
+            <a href="{URL}">{Label}</a>
+          </li>
+          {/block:Pages}
+          {/block:HasPages}
+        </ul>
+      </nav>
+    </header>
+    <main>
+      {block:Posts}
+      <article>
+        {block:Date}
+        <header>
+          <time class="post__timestamp" datetime="{Year}-{MonthNumber}-{DayOfMonth} {24Hour}-{Minutes}-{Seconds}">
+            <a href="{Permalink}" class="post__link">{Year}/{MonthNumber}/{DayOfMonth} {24Hour}:{Minutes}:{Seconds}</a>
+          </time>
+        </header>
+        {/block:Date}
+        <main>
+          {block:Text}
+          {block:Title}
+          <h2>
+            <a href="{Permalink}">{Title}</a>
+          </h2>
+          {/block:Title}
+          {Body}
+          {/block:Text}
+          
+          {block:Photo}
+          <figure>
+            <img src="{PhotoURL-500}" alt="{PhotoAlt}">
+            {block:Caption}
+            <figcaption>
+              {Caption}
+            </figcaption>
+            {/block:Caption}
+          </figure>
+          {/block:Photo}
+          
+          {block:Panorama}
+          <figure>
+            {LinkOpenTag}
+            <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}">
+            {LinkCloseTag}
+            {block:Caption}
+            <figcaption>
+              {Caption}
+            </figcaption>
+            {/block:Caption}
+          </figure>
+          {/block:Panorama}
+          
+          {block:Photoset}
+          <figure>
+            {Photoset-500}
+            {block:Caption}
+            <figcaption>
+              {Caption}
+            </figcaption>
+            {/block:Caption}
+          </figure>
+          {/block:Photoset}
+          
+          {block:Quote}
+          <figure>
+            <blockquote>
+              {Quote}
+            </blockquote>
+            {block:Source}
+            <figcaption>
+              <cite>
+                {Source}
+              </cite>
+            </figcaption>
+            {/block:Source}
+          </figure>
+          {/block:Quote}
+          
+          {block:Link}
+          <figure>
+            <a href="{URL}" {Target}>{Name}</a>
+            {block:Description}
+            <figcaption>
+              {Description}
+            </figcaption>
+            {/block:Description}
+          </figure>
+          {/block:Link}
+          
+          {block:Chat}
+          {block:Title}
+          <h2>
+            <a href="{Permalink}">{Title}</a>
+          </h2>
+          {/block:Title}
+          {block:Lines}
+          <dl>
+            {block:Label}
+            <dt>{Label}</dt>
+            {/block:Label}
+            <dd>{Line}</dd>
+          </dl>
+          {/block:Lines}
+          {/block:Chat}
+          
+          {block:Video}
+          <figure>
+            {Video-500}
+            {block:Caption}
+            <figcaption>
+              {Caption}
+            </figcaption>
+            {/block:Caption}
+          </figure>
+          {/block:Video}
+          
+          {block:Audio}
+          <figure>
+            {AudioEmbed}
+            {block:Caption}
+            <figcaption>
+              {Caption}
+            </figcaption>
+            {/block:Caption}
+          </figure>
+          {/block:Audio}
+          </main>
+          <footer>
+            {block:HasTags}
+            <dl>
+              <dt>
+                Tags:
+              </dt>
+              <dd>
+                <ul>
+                  {block:Tags}
+                  <li>{Tag}</li>
+                  {/block:Tags}
+                </ul>
+              </dd>
+            </dl>
+            {/block:HasTags}
+            {block:PostNotes}
+            {PostNotes}
+            {/block:PostNotes}
+          </footer>
+      </article>
+      {/block:Posts}
+      {block:Pagination}
+      <nav>
+        <ul>
+          {block:PreviousPage}
+          <li>
+            <a href="{PreviousPage}">&#171; Previous</a>
+          </li>
+          {/block:PreviousPage}
+          <li>{CurrentPage} / {TotalPages}</li>
+          {block:NextPage}
+          <li>
+            <a href="{NextPage}">Next &#187;</a>
+          </li>
+          {/block:NextPage}
+        </ul>
+      </nav>
+      {/block:Pagination}
+    </main>
+    <footer>
+      <small>(c) {Title}</small>
+    </footer>
+  </body>
+</html>
