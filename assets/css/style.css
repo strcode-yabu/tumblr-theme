@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+JP:wght@400;700&display=swap");
+:root {
+  --font-general: 'BIZ UDGothic', 'Noto Sans JP', sans-serif;
+  --font-code: 'JetBrains Mono', 'BIZ UDGothic', 'Noto Sans JP', monospace;
+  --color-main: rgb(30, 150 , 90);
+  --color-light: rgb(30, 180 , 150);
+  --color-dark: rgb(30, 90, 30);
+  --color-accent: rgb(210, 60, 30);
+  --color-bg: rgb(255, 255, 255);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: var(--color-main);
+  font-size: 1rem;
+  font-family: var(--font-general);
+  line-height: 1.4;
+  background: var(--color-bg);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  margin-left: .25em;
+  margin-right: .25em;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+a:hover {
+  opacity: .8;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.header__inner {
+  padding: 16px 32px;
+}
+
+.header__navi__items {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 16px;
+}
+
+.main {
+  margin-top: 48px;
+}
+
+.posts__wrap {
+  padding: 0 32px;
+}
+
+@media (min-width: 768px) {
+  .posts__wrap {
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.post:not(:first-child) {
+  margin-top: 32px;
+}
+
+.post__header {
+  border-bottom: 1px solid var(--color-dark);
+  padding: 8px 0;
+}
+
+.post__timestamp, .post__title {
+  font-size: 2rem;
+}
+
+.post__main {
+  margin-top: 24px;
+}
+
+.post__main p,
+.post__main h1, .post__main h2, .post__main h3, .post__main h4, .post__main h5, .post__main h6,
+.post__main blockquote,
+.post__main ul, .post__main ol,
+.post__main table,
+.post__main pre {
+  margin-bottom: 24px;
+}
+
+.post__main p:last-child,
+.post__main h1:last-child, .post__main h2:last-child, .post__main h3:last-child, .post__main h4:last-child, .post__main h5:last-child, .post__main h6:last-child,
+.post__main blockquote:last-child,
+.post__main ul:last-child, .post__main ol:last-child,
+.post__main table:last-child,
+.post__main pre:last-child {
+  margin-bottom: 0;
+}
+
+.post__main h1 {
+  font-size: 1.8rem;
+}
+
+.post__main h2 {
+  font-size: 1.6rem;
+}
+
+.post__main h3 {
+  font-size: 1.4rem;
+}
+
+.post__main h4,
+.post__main h5 {
+  font-size: 1.2rem;
+}
+
+.post__main blockquote {
+  border-left: 4px solid var(--color-dark);
+  padding: 8px 0 8px .75em;
+}
+
+.post__main ul, .post__main ol {
+  padding-left: 1.4rem;
+}
+
+.post__main li:not(:first-of-type) {
+  margin-top: .25em;
+}
+
+.post__main table {
+  max-width: 100%;
+}
+
+.post__main th, .post__main td {
+  border: 1px solid var(--color-dark);
+  padding: .25em .5em;
+}
+
+.post__main pre {
+  max-width: 100%;
+  font-family: var(--font-code);
+  overflow: auto;
+}
+
+.post__main code {
+  font-family: var(--font-code);
+}
+
+.post__footer {
+  margin-top: 24px;
+}
+
+.post__tag__area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
+.post__tag__title {
+  font-weight: bold;
+}
+
+.post__tag__items {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+}
+
+.post__tag__link {
+  color: var(--color-bg);
+  background: var(--color-light);
+  border-radius: 4px;
+  padding: .25em .75em;
+  display: inline-block;
+}
+
+.pagination {
+  margin-top: 32px;
+}
+
+.pagination__inner {
+  border-top: 1px solid var(--color-dark);
+  padding: 8px 24px;
+}
+
+.pagination__items {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px;
+}
+
+.pagination__count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+}
+
+.footer {
+  margin-top: 48px;
+  padding: 8px 24px;
+}
+
+.footer__inner {
+  text-align: center;
+}
+
+.copyright {
+  font-size: .75rem;
+}
+/*# sourceMappingURL=style.css.map */
