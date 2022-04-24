@@ -249,4 +249,8 @@ iframe {
 // Copyright
 .copyright {
   font-size: .75rem;
+  &::before {
+    content: '(c)';
+    margin-right: .5em;
+  }
 }

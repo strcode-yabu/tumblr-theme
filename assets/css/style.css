@@ -288,4 +288,9 @@ iframe {
 .copyright {
   font-size: .75rem;
 }
+
+.copyright::before {
+  content: '(c)';
+  margin-right: .5em;
+}
 /*# sourceMappingURL=style.css.map */
