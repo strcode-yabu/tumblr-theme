@@ -61,6 +61,10 @@
         max-width: 100%;
       }
 
+      .tumblr_video_container {
+        max-width: 100%;
+      }
+
       @media (min-width: 768px) {
         .inner {
           max-width: 1040px;

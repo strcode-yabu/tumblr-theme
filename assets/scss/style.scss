@@ -53,6 +53,10 @@ iframe {
   max-width: 100%;
 }
 
+.tumblr_video_container {
+  max-width: 100%;
+}
+
 .inner {
   @include pc() {
     max-width: 1040px;
