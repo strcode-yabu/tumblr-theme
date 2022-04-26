@@ -75,6 +75,15 @@ iframe {
       flex-wrap: wrap;
       gap: 16px;
     }
+    &__item {
+      display: flex;
+      gap: 16px;
+      &:not(:first-of-type) {
+        &::before {
+          content: '/';
+        }
+      }
+    }
   }
 }
 
