@@ -32,8 +32,6 @@ body {
 a {
   color: var(--color-accent);
   text-decoration: none;
-  margin-left: .25em;
-  margin-right: .25em;
   -webkit-transition: .3s;
   transition: .3s;
 }
