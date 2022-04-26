@@ -7,6 +7,7 @@
   --color-dark: rgb(30, 90, 30);
   --color-accent: rgb(210, 60, 30);
   --color-bg: rgb(255, 255, 255);
+  --color-code-bg: rgb(214, 214, 214);
 }
 
 * {
@@ -173,14 +174,17 @@ iframe {
   padding: .25em .5em;
 }
 
-.post__main pre {
-  max-width: 100%;
-  font-family: var(--font-code);
-  overflow: auto;
-}
-
+.post__main pre,
 .post__main code {
   font-family: var(--font-code);
+  background: var(--color-code-bg);
+  border-radius: 2px;
+  padding: .25em .5em;
+}
+
+.post__main pre {
+  max-width: 100%;
+  overflow: auto;
 }
 
 .post__footer {
