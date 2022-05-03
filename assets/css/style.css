@@ -303,7 +303,16 @@ iframe {
   gap: 16px;
 }
 
+.pagination__item:first-of-type .pagination__link::before {
+  content: '<';
+}
+
+.pagination__item:last-of-type .pagination__link::after {
+  content: '>';
+}
+
 .pagination__count {
+  padding: .25em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -311,6 +320,23 @@ iframe {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 8px;
+}
+
+.pagination__link {
+  width: 6em;
+  color: var(--color-bg);
+  background: var(--color-dark);
+  border-radius: 4px;
+  padding: .25em .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer {
