@@ -63,6 +63,14 @@ iframe {
   padding: 16px 32px;
 }
 
+.header__title {
+  margin-bottom: 8px;
+}
+
+.header__description {
+  margin-bottom: 16px;
+}
+
 .header__navi__items {
   list-style-type: none;
   display: -webkit-box;
@@ -85,7 +93,7 @@ iframe {
 }
 
 .main {
-  margin-top: 48px;
+  margin-top: 32px;
 }
 
 .posts__wrap {
@@ -306,7 +314,7 @@ iframe {
 }
 
 .footer {
-  margin-top: 48px;
+  margin-top: 32px;
   padding: 8px 24px;
 }
 

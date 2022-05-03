@@ -69,6 +69,12 @@ iframe {
   &__inner {
     padding: 16px 32px;
   }
+  &__title {
+    margin-bottom: 8px;
+  }
+  &__description {
+    margin-bottom: 16px;
+  }
   &__navi {
     &__items {
       list-style-type: none;
@@ -90,7 +96,7 @@ iframe {
 
 // Main.
 .main {
-  margin-top: 48px;
+  margin-top: 32px;
 }
 
 // Post.
@@ -263,7 +269,7 @@ iframe {
 
 // Footer.
 .footer {
-  margin-top: 48px;
+  margin-top: 32px;
   padding: 8px 24px;
   &__inner {
     text-align: center;
