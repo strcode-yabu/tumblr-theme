@@ -215,6 +215,7 @@ iframe {
 
 .post__tag__title {
   font-weight: bold;
+  padding: .25em 0;
 }
 
 .post__tag__items {
