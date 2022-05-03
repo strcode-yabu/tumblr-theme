@@ -195,6 +195,10 @@ iframe {
   overflow: auto;
 }
 
+.post__main pre code {
+  padding: 0;
+}
+
 .post__chat__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
